@@ -103,7 +103,7 @@ footer {
 
 /* Link Styling for Resource Page */
 .resources-container {
-    text-align: left;
+    text-align: center;  /* Centering the content */
     max-width: 800px;
     margin: auto;
     padding: 20px;
@@ -120,28 +120,34 @@ footer {
 .resources-container p {
     font-size: 1.1em;
     line-height: 1.6;
-    text-align: justify;
+    text-align: center;
 }
 
 /* Links */
 .resources-container a {
-    color: #42b983; /* Soft green */
+    color: #ffcc00; /* Yellow links for better contrast */
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 1.1em;
 }
 
 .resources-container a:hover {
-    color: #36a572; /* Darker green on hover */
+    color: #ff9900; /* Darker yellow on hover */
+    text-decoration: underline;
 }
 
-/* Bullet Points */
+/* Bullet Points Fix */
 .resources-container ul {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Center bullet content */
 }
 
 .resources-container ul li {
     margin: 10px 0;
+    font-size: 1.1em;
 }
 
 /* Centering Text */

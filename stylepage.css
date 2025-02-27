@@ -38,7 +38,7 @@ nav ul li a {
 
 /* Main Content */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
     background: #222222; /* Matching darker background */
@@ -53,12 +53,13 @@ main {
 
 /* Adjusted Middle Box Color */
 .intro-box {
-    background-color: #292929; /* Darker grey to match the theme */
+    background-color: #1a1a1a; /* Matching main background */
     padding: 20px;
     margin: 30px auto;
     border-radius: 10px;
-    width: 60%;
+    width: 80%;
     max-width: 800px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Button Section */
@@ -70,21 +71,22 @@ main {
 }
 
 .info-button {
-    background-color: #42b983;
-    color: black;
+    background-color: #e60000;
+    color: white;
     padding: 12px 18px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
 }
 
 .info-button:hover {
-    background-color: #36a572;
+    background-color: #ff3333;
 }
 
 /* Images */
 img {
-    max-width: 20%;
+    max-width: 150px;
     height: auto;
     display: block;
     margin: 20px auto;

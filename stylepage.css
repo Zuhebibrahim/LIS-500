@@ -45,6 +45,42 @@ main {
     border-radius: 10px;
 }
 
+/* Home Page Specific Styling */
+.home-container h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+.intro-box {
+    background-color: #2A2A3A;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 800px;
+}
+
+/* Button Section */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.info-button {
+    background-color: #42b983;
+    color: black;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-button:hover {
+    background-color: #36a572;
+}
+
 /* Images */
 img {
     max-width: 20%;
@@ -53,8 +89,6 @@ img {
     margin: 20px auto;
     border-radius: 10px;
 }
-
-
 
 /* Footer */
 footer {

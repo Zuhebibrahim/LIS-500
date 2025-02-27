@@ -38,7 +38,7 @@ nav ul li a {
 
 /* Main Content */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
     background: #222222; /* Matching darker background */
@@ -57,7 +57,7 @@ main {
     padding: 20px;
     margin: 30px auto;
     border-radius: 10px;
-    width: 60%;
+    width: 80%;
     max-width: 800px;
 }
 
@@ -101,56 +101,59 @@ footer {
     margin-top: 20px;
 }
 
-/* Link Styling for Resource Page */
-.resources-container {
-    text-align: center;  /* Centering the content */
-    max-width: 800px;
+/* Styling for Resource Page */
+.resources {
+    text-align: left; /* Align text for better readability */
+    max-width: 900px;
     margin: auto;
     padding: 20px;
-    background: #222222; /* Darker background to match */
+    background: #222222; /* Matching darker background */
     border-radius: 10px;
 }
 
-.resources-container h2 {
-    color: #ffcc00; /* Yellow for better visibility */
+/* Resource Section Styling */
+.resources h1 {
     text-align: center;
+    color: #ffcc00; /* Bright yellow to stand out */
     margin-bottom: 15px;
 }
 
-.resources-container p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: center;
+.resources h2 {
+    color: #ffcc00; /* Bright yellow for section headers */
+    margin-top: 25px;
 }
 
-/* Links */
-.resources-container a {
-    color: #ffcc00; /* Yellow links for better contrast */
+/* Resource Box */
+.resource-box {
+    background-color: #292929; /* Dark grey background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Links Styling */
+.resources a {
+    color: #ffcc00; /* Yellow links for better visibility */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1em;
     display: inline-block;
     margin: 5px 0;
-    font-size: 1.1em;
 }
 
-.resources-container a:hover {
+.resources a:hover {
     color: #ff9900; /* Darker yellow on hover */
     text-decoration: underline;
 }
 
 /* Bullet Points Fix */
-.resources-container ul {
+.resources ul {
     list-style-type: none;
     padding: 0;
-    text-align: center; /* Center bullet content */
 }
 
-.resources-container ul li {
+.resources ul li {
     margin: 10px 0;
     font-size: 1.1em;
-}
-
-/* Centering Text */
-h1, h2 {
-    text-align: center;
 }

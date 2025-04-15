@@ -1,32 +1,36 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset & Base */
+* {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Dark background for contrast */
-    color: #ffffff; /* White text for readability */
-    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Header */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Header */
 header {
-    background: #e60000; /* Red navigation bar */
-    color: white;
-    padding: 20px;
+    background: #e60000;
+    padding: 20px 0;
     text-align: center;
 }
 
-/* Navigation */
 nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -36,59 +40,14 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Main Content */
+/* Main Container */
 main {
+    flex: 1;
     max-width: 900px;
     margin: auto;
+    width: 90%;
     padding: 20px;
-    background: #222222; /* Matching darker background */
-    border-radius: 10px;
-}
-
-/* Home Page Specific Styling */
-.home-container h1 {
-    margin-top: 20px;
-    font-size: 2.5em;
-}
-
-/* Adjusted Middle Box Color */
-.intro-box {
-    background-color: #292929; /* Darker grey to match the theme */
-    padding: 20px;
-    margin: 30px auto;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 800px;
-}
-
-/* Button Section */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.info-button {
-    background-color: #e60000; /* Red background */
-    color: white; /* White text for contrast */
-    padding: 12px 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-}
-
-.info-button:hover {
-    background-color: #ff3333; /* Lighter red on hover */
-}
-
-/* Images */
-img {
-    max-width: 20%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
+    background-color: #222222;
     border-radius: 10px;
 }
 
@@ -98,62 +57,114 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    margin-top: auto;
+}
+
+/* Homepage */
+.home-container h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+.intro-box {
+    background-color: #292929;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 20px;
 }
 
-/* Styling for Resource Page */
-.resources {
-    text-align: left; /* Align text for better readability */
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background: #222222; /* Matching darker background */
+.info-button {
+    background-color: #e60000;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #ff3333;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
     border-radius: 10px;
 }
 
-/* Resource Section Styling */
-.resources h1 {
-    text-align: center;
-    color: #ffcc00; /* Bright yellow to stand out */
-    margin-bottom: 15px;
-}
-
-.resources h2 {
-    color: #ffcc00; /* Bright yellow for section headers */
-    margin-top: 25px;
-}
-
-/* Resource Box */
-.resource-box {
-    background-color: #292929; /* Dark grey background */
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+/* Resources & Tech Heroes Shared Style */
+.resources, .tech-hero {
     text-align: left;
 }
 
-/* Links Styling */
-.resources a {
-    color: #ffcc00; /* Yellow links for better visibility */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    display: inline-block;
-    margin: 5px 0;
+.resources h1, .tech-hero h1 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 15px;
 }
 
-.resources a:hover {
-    color: #ff9900; /* Darker yellow on hover */
+.resources h2, .tech-hero h2 {
+    color: #ffcc00;
+    margin-top: 25px;
+}
+
+/* Section Box Reusable */
+.resource-box {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Links */
+.resources a, .tech-hero a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05em;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.resources a:hover, .tech-hero a:hover {
+    color: #ff9900;
     text-decoration: underline;
 }
 
-/* Bullet Points Fix */
-.resources ul {
+/* List Items */
+.resources ul, .tech-hero ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .resources ul li {
     margin: 10px 0;
-    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-button {
+        width: 80%;
+        text-align: center;
+    }
 }

@@ -1,4 +1,4 @@
-// Teachable Machine 
+// Teachable Machine - Hand Pose
 // Ulises Gonzalez & Zuheb Ibrahim
 
 // Video
@@ -36,7 +36,7 @@ function draw() {
   textSize(32);
   textAlign(CENTER, CENTER);
   fill(255);
-  text(label, width / 2, height - 16);
+  text(label, width / 2, height - 28);
 
   // Pick an emoji, the "default" is train
   let emoji = "🚂";
@@ -51,8 +51,8 @@ function draw() {
   }
 
   // Draw the emoji
-  textSize(256);
-  text(emoji, width / 2, height / 2);
+  textSize(128); 
+  text(emoji, width / 2, height / 1.3);
 }
 
 // STEP 3: Get the classification!

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
     <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
     <script src="sketch.js"></script>
-    
+
 </head>
+
 <body>
     <header>
         <nav>
@@ -28,47 +30,113 @@
         <h1>Teachable Machine: Exploring AI and Bias</h1>
 
         <div class="resource-box">
-            <h2>Project Statement</h2>
-            <p>
-                For this project, I used Google's Teachable Machine to create an image classification model that distinguishes between "Smiling Face" and "Neutral Face." 
-                I collected sample images from my laptop webcam, trained the model, and tested it for real-time predictions.
-            </p>
-            <p>
-                While the training process was user-friendly, I encountered issues with lighting inconsistencies and class balance. It showed how even small biases in data (e.g., too many images of one class) impacted the final result.
-            </p>
-            <p>
-                Reflecting on Joy Buolamwini's <em>Unmasking AI</em>, I was reminded how deeply bias can shape systems meant to be "neutral." Like Buolamwini, I noticed how the model responded better to lighter lighting conditions and sometimes misclassified people with darker skin tones. This highlighted the dangers of biased datasets and reminded me that design choices in AI are never neutral.
-            </p>
-            <p>
-                One core lesson I took from the book is that inclusion has to be intentional—not an afterthought. Training a model isn't just about technical accuracy—it's about ethical responsibility. I now better understand why Buolamwini calls for audits, transparency, and community input in AI development.
-            </p>
-            <p>
-                In the future, I want to explore more inclusive training practices and experiment with larger, more diverse datasets. This experience emphasized that technology reflects the values we embed in it—and we must constantly work to unlearn bias as we build.
-            </p>
-            <p><strong>Group Members:</strong> Zuheb Ibrahim, Ulises Sanchez</p>
+            <article>
+                <h2>Project Statement</h2>
+                <br>
+                <p> For our project, we created our own 'fine-tuned' machine-learning model using ml5 and
+                    p5.js to classify different hand poses. These hand poses were: 'thumbs up', 'thumbs down', 'peace
+                    sign', and 'heart hands'. </p>
+                <br>
+                <p>Upon our initial training phases, we learned that having too many categories, especially similar
+                    ones, hindered performance and made the model unreliable. For this reason, we decided to narrow down
+                    our categories to the four previously mentioned. We chose these four for their distinctness in order
+                    to facilitate a more accurate model.</p>
+                <br>
+                <p>After narrowing our categories, we found ourselves having to re-train our model over and over again.
+                    The training and testing of our model showed us just how contextual and delicate training data truly
+                    is. Everything from angle, to lighting, to distance from the camera, affected the model's
+                    robustness. This perfectly exemplifies why practical AI is so data-intensive. You must capture all
+                    ways in which the class can present itself, which is practically a never-ending task. Our first
+                    attempts were bugged and unstable, failing to show the 'train' label when presented with no hand
+                    pose. We surmised that this was due to too many similarities between the photos. We also realized
+                    that our attempts to make it robust to variation was also hurting performance. So in order to
+                    accommodate the scope of the project, we opted for a more clear-cut approach. Instead of trying to
+                    capture each hand pose from all possible angles, we assigned a 'signature' pose to each class,
+                    respectively.</p>
+                <br>
+                <p>Curious about our new model's accuracy, I decided to remove my black hoodie and test it with my blue
+                    shirt instead. Unsurprisingly, the model incorrectly displayed the 'thumbs down' label unprompted,
+                    rather than the default 'train' label. It did however still classify the other hand poses correctly.
+                    I put my black hoodie back on and... problem solved. I then realized that this was exactly that
+                    which Buolawmini terms 'the coded gaze', but instead of having to wear a white mask, it was a black
+                    hoodie. Ha. But in all seriousness, we were able to better understand the concept via the
+                    finicky-ness of our model. Our previous iterations has low-quality data and had us jumping through
+                    hoops to get the elicit the correct response. This ultimately leads to an inaccessible design
+                    tailored to only those within the confines of the data.</p>
+                <br>
+                <p>Despite the simplicity and limitations of our model, it perfectly illustrates some of the issues and
+                    dangers of AI Buolawmini writes of. Specifically, that AI is not only fallible but is ultimately a
+                    product of the data and algorithms used to train it, both of which are subject to the creator's
+                    discretion. It is a machine, entirely reliant and limited to the predefined. Thus, AI can and often
+                    does indirectly reflect the subconscious beliefs and operational paradigms of their creators. Or in
+                    her words, 'The machines we build reflect the priorities, preferences, and even prejudices of those
+                    who have the power to shape technology.' It then becomes easy to see how such a powerful technology
+                    could have harmful outcomes when algorithmically unjust. </p>
+                <br>
+                <p>For this reason, it is on the people creating AI as well as those responsible for regulating it, to
+                    ensure that machine-learning algorithms, especially those adopted by corporations and institutions,
+                    are human-centered and morally just.
+                </p>
+                <br>
+                <p>Conversely, just as AI can be weaponized through incompetence and negligence, it can also be
+                    weaponized through extreme competence and diligence. That is, when the AI, like facial recognition,
+                    actually works effectively and can be abused. I share many of Buolawmini's concerns, particularly
+                    those about how AI-driven surveillance can amplify oppressive systems and enable tyrannical
+                    outcomes.</p>
+                <br>
+                <p>It is also interesting to think about the legality of using facial recognition technology on
+                    non-consenting subjects. It seems like an obvious violation of one's right to be subjected to having
+                    your biometric data harvested and used against your will. But a quick search will tell you that "Law
+                    enforcement and federal agencies can use biometric systems without notifying you, especially in
+                    public spaces, under the legal idea that you have no 'reasonable expectation of privacy' there."
+                    YIKES! Did you know that? I sure didn't.</p>
+                <br>
+                <p>Synthesizing all of this information, I would actually argue that Buolawmini does not go far enough
+                    in what she advocates should change. I'd say the change needs to happen on an even bigger level —
+                    the constitutional level. You know, that old piece of paper that hasn't been overhauled in over 200
+                    years to account for things like, I don't know... the advent of electricity? The fourth amendment
+                    which protects you from unlawful searches becomes completely obsolete when the camera on the corner
+                    can identify you in seconds. After all, what even is privacy if Big Brother has your whereabouts
+                    twenty-four seven? Even search warrants begin to feel like a formality when the government has the
+                    capabilities to spy on you.</p>
+                <br>
+                <p>The Constitution never imagined a world where your biometric data is currency and surveillance is the
+                    cost of convenience. Turns out, checks and balances don't really mean all that much if the law can't
+                    keep up with technology.</p>
+                <br>
+            </article>
+            <p><strong>Group Members:</strong> Ulises Gonzalez & Zuheb Ibrahim </p>
         </div>
 
         <div class="resource-box">
-            <h2>Video: Teachable Machine in Action</h2>
-            <p>Watch our classifier working in real-time:</p>
+            <h2>DEMO: Teachable Machine - Hand Poses</h2>
+            <br>
+            <p>Watch the demo to learn how our classifier works:</p>
+            <br>
             <video width="560" height="315" controls>
-            <source src="demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+                <source src="demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
         </div>
 
         <div class="resource-box">
-    <h2>Try the Model (Live)</h2>
-    <p>Interact with the classifier directly on this page using your webcam:</p>
-    <div id="canvas-container"></div>
-</div>
+            <h2>Try Our Model Yourself!</h2>
+            <br>
+            <p>Interact with our model directly on this page using your webcam:</p>
+            <div id="canvas-container"></div>
+        </div>
 
 
 
         <div class="resource-box">
-            <h2>GitHub Repository</h2>
+            <h2>Links</h2>
+            <br>
             <p>You can view our full project files and documentation on GitHub:</p>
             <a href="https://github.com/Zuhebibrahim/LIS-500" target="_blank">GitHub Repository</a>
+            <br>
+            <br>
+            <p>Here is where our model is hosted:</p>
+            <a href="https://teachablemachine.withgoogle.com/models/ybXBzoWbR/" target="_blank">Teachable Machine</a>
         </div>
 
     </main>
@@ -77,6 +145,6 @@
         <p>&copy; 2025 Code & Power Project</p>
     </footer>
 
-    
 </body>
+
 </html>

@@ -51,7 +51,7 @@ function draw() {
   }
 
   // Draw the emoji
-  textSize(128); 
+  textSize(128);
   text(emoji, width / 2, height / 1.3);
 }
 

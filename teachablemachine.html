@@ -53,6 +53,14 @@
                     capture each hand pose from all possible angles, we assigned a 'signature' pose to each class,
                     respectively.</p>
                 <br>
+                <p>
+                    We then employed this new, more methodical approach to produce our training data, using a generic
+                    'signature' pose to optimize accuracy and making sure to limit variation of the background. This was
+                    done by positioning ourselves to take up the entirety of the frame, effectively creating a backdrop
+                    for the hand pose. This greatly improved our model's accuracy as it rid our data of most of the
+                    'noise' which in turn produced more pronounced classification criteria. In short, the TM now had a
+                    better idea of what it was looking for.
+                </p>
                 <p>Curious about our new model's accuracy, I decided to remove my black hoodie and test it with my blue
                     shirt instead. Unsurprisingly, the model incorrectly displayed the 'thumbs down' label unprompted,
                     rather than the default 'train' label. It did however still classify the other hand poses correctly.

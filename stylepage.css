@@ -169,4 +169,10 @@ img {
     }
 }
 
-#canvas-container { text-align: center; }
+/* Canvas Container for Live Model */
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+

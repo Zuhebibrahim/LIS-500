@@ -1,3 +1,9 @@
+/* Global Header Colors */
+h1, h2 {
+    color: #ffcc00;
+}
+
+
 /* Reset & Base */
 * {
     margin: 0;
@@ -14,9 +20,10 @@ html, body {
     flex-direction: column;
 }
 
+
 /* Navigation Header */
 header {
-    background: #e60000;
+    background: black;
     padding: 20px 0;
     text-align: center;
 }
@@ -40,6 +47,7 @@ nav ul li a {
     font-weight: bold;
 }
 
+
 /* Main Container */
 main {
     flex: 1;
@@ -51,6 +59,7 @@ main {
     border-radius: 10px;
 }
 
+
 /* Footer */
 footer {
     background: black;
@@ -59,6 +68,7 @@ footer {
     padding: 10px;
     margin-top: auto;
 }
+
 
 /* Homepage */
 .home-container h1 {
@@ -74,6 +84,7 @@ footer {
     max-width: 800px;
 }
 
+
 /* Button Styles */
 .button-container {
     display: flex;
@@ -84,8 +95,8 @@ footer {
 }
 
 .info-button {
-    background-color: #e60000;
-    color: white;
+    background-color: #ffcc00;
+    color: black;
     padding: 12px 18px;
     border-radius: 8px;
     text-decoration: none;
@@ -95,8 +106,9 @@ footer {
 }
 
 .info-button:hover {
-    background-color: #ff3333;
+    background-color: #ff8c00;
 }
+
 
 /* Image Styles */
 img {
@@ -107,21 +119,24 @@ img {
     border-radius: 10px;
 }
 
+
 /* Resources & Tech Heroes Shared Style */
-.resources, .tech-hero {
+.resources,
+.tech-hero {
     text-align: left;
 }
 
-.resources h1, .tech-hero h1 {
+.resources h1,
+.tech-hero h1 {
     text-align: center;
-    color: #ffcc00;
     margin-bottom: 15px;
 }
 
-.resources h2, .tech-hero h2 {
-    color: #ffcc00;
+.resources h2,
+.tech-hero h2 {
     margin-top: 25px;
 }
+
 
 /* Section Box Reusable */
 .resource-box {
@@ -131,9 +146,11 @@ img {
     margin-bottom: 20px;
 }
 
+
 /* Links */
-.resources a, .tech-hero a {
-    color: #ffcc00;
+.resources a,
+.tech-hero a {
+    color: #bf7002;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.05em;
@@ -141,13 +158,16 @@ img {
     margin-top: 10px;
 }
 
-.resources a:hover, .tech-hero a:hover {
-    color: #ff9900;
+.resources a:hover,
+.tech-hero a:hover {
+    color: #ff8c00;
     text-decoration: underline;
 }
 
+
 /* List Items */
-.resources ul, .tech-hero ul {
+.resources ul,
+.tech-hero ul {
     list-style-type: none;
     padding-left: 0;
 }
@@ -155,6 +175,7 @@ img {
 .resources ul li {
     margin: 10px 0;
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -169,6 +190,7 @@ img {
     }
 }
 
+
 /* Canvas Container for Live Model */
 #canvas-container {
     display: flex;
@@ -178,4 +200,4 @@ img {
 
 #TM-page h2 {
     margin-top: 10px; 
-  }
+}
